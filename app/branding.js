@@ -90,6 +90,7 @@ export function getDefaultLogin() {
  * @returns {[string,string,string,string,string,string]}
  */
 export function getUnits() {
+    return ["BTS"];
     if (_isTestnet()) {
         return ["TEST"];
     }
@@ -109,6 +110,7 @@ export function getDefaultMarket() {
  * @returns {[string]}
  */
 export function getMyMarketsBases() {
+    return ["BTS"];
     if (_isTestnet()) {
         return ["TEST"];
     }
@@ -121,6 +123,7 @@ export function getMyMarketsBases() {
  * @returns {[string]}
  */
 export function getMyMarketsQuotes() {
+    return ["BTS"];
     if (_isTestnet()) {
         return ["TEST"];
     }
@@ -248,6 +251,7 @@ export function getMyMarketsQuotes() {
  * @returns {list of string tuples}
  */
 export function getFeaturedMarkets(quotes = []) {
+    return [["USD", "BTS"]];
     if (_isTestnet()) {
         return [["USD", "TEST"]];
     }
@@ -415,7 +419,7 @@ export function getConfigurationAsset() {
     if (_isTestnet()) {
         assetSymbol = "NOTIFICATIONS";
     } else {
-        assetSymbol = "TEST";
+        assetSymbol = "BTS";
     }
     // explanation will be parsed out of the asset description (via split)
     return {

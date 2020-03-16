@@ -56,7 +56,7 @@ class FeaturedMarkets extends React.Component {
             return props.markets;
         } else {
             // assume testnet
-            return [["TEST", "PEG.FAKEUSD"], ["TEST", "BTWTY"]];
+            return [["BTS", "PEG.FAKEUSD"], ["BTS", "BTWTY"]];
         }
     }
 
