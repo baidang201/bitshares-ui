@@ -42,17 +42,17 @@ export function getWalletURL() {
  */
 export function getFaucet() {
     return {
-        url: "https://faucet.bitshares.eu/onboarding", // 2017-12-infrastructure worker proposal
+        url: "http://47.92.31.25:9001", // 2017-12-infrastructure worker proposal
         show: true,
         editable: false,
-        referrer: "onboarding.bitshares.foundation"
+        referrer: "mvs"
     };
 }
 
 export function getTestFaucet() {
     // fixme should be solved by introducing _isTestnet into getFaucet and fixing the mess in the Settings when fetching faucet address
     return {
-        url: "https://faucet.testnet.bitshares.eu", // operated as a contribution by BitShares EU
+        url: "http://47.92.31.25:9001", // operated as a contribution by BitShares EU
         show: true,
         editable: false
     };
@@ -98,6 +98,7 @@ export function getUnits() {
 }
 
 export function getDefaultMarket() {
+    return "USD_BTS";
     if (_isTestnet()) {
         return "USD_TEST";
     }
@@ -348,7 +349,7 @@ export function getFeaturedMarkets(quotes = []) {
         ["BTS", "RUDEX.SMOKE"],
         ["BTS", "XBTSX.STH"],
         ["BTS", "XBTSX.WAVES"],
-        ["BTS", "HERTZ"],
+        ["BTS", "HERTZ"]
     ].filter(a => {
         if (!quotes.length) return true;
         return quotes.indexOf(a[0]) !== -1;
@@ -364,14 +365,7 @@ export function getAssetNamespaces() {
     if (_isTestnet()) {
         return [];
     }
-    return [
-        "OPEN.",
-        "RUDEX.",
-        "GDEX.",
-        "XBTSX.",
-        "CITADEL.",
-        "DEEX."
-    ];
+    return ["OPEN.", "RUDEX.", "GDEX.", "XBTSX.", "CITADEL.", "DEEX."];
 }
 
 /**
