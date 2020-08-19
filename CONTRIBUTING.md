@@ -1,5 +1,5 @@
 ## Funding update September 1st
-The BitShares UI worker is not funded, and all bounty rewards must be considered paused.
+The DNA UI worker is not funded, and all bounty rewards must be considered paused.
 
 Please [check here](https://github.com/bitshares/bitshares-ui/issues/3044) for more details and updates.
 
@@ -7,9 +7,9 @@ Please [check here](https://github.com/bitshares/bitshares-ui/issues/3044) for m
 
 Please work off the develop branch and make pull requests to that branch. The master branch will only be updated for new releases.
 
-The Bitshares UI team is supported by this [worker proposal](https://www.bitshares.foundation/workers/2019-02-bitshares-ui). It provides the funds needed to pay for the development team and the community bounties.
+The DNA UI team is supported by this [worker proposal](https://www.bitshares.foundation/workers/2019-02-bitshares-ui). It provides the funds needed to pay for the development team and the community bounties.
 
-If you would like to get involved, we have a [Telegram chatroom](https://t.me/BitSharesDEX) where you can ask questions and get help. You may also join [BitShares on Discord](https://discord.gg/GsjQfAJ)
+If you would like to get involved, we have a [Telegram chatroom](https://t.me/BitSharesDEX) where you can ask questions and get help. You may also join [DNA on Discord](https://discord.gg/GsjQfAJ)
 
 ## Development process
 
@@ -21,7 +21,7 @@ If you would like to get involved, we have a [Telegram chatroom](https://t.me/Bi
 - Milestones are numbered YYMMDD and indicates the expected delivery.
 - Bugs are always worked before enhancements
 - Developers should work each issue according to a numbered branch corresponding to the issue `git checkout -b 123`
-- We pay **bounties** for issues that have been estimated. An estimated issue is prefixed with a number in brackets like this: `[2] An nasty bug`. In this example, the bug is valued at two **Quality Hours** ($125 per hour). If you fix this issue according to these guidelines and your PR is accepted, this will earn you $250 worth of bitCNY. You must have a Bitshares wallet and a Bitshares account to receive payment.
+- We pay **bounties** for issues that have been estimated. An estimated issue is prefixed with a number in brackets like this: `[2] An nasty bug`. In this example, the bug is valued at two **Quality Hours** ($125 per hour). If you fix this issue according to these guidelines and your PR is accepted, this will earn you $250 worth of bitCNY. You must have a DNA wallet and a DNA account to receive payment.
 - Non-code contributions such as translations, documentation work and others may be compensated at a lower hourly rate. This will be clearly stated in the relevant issue.
 
 **IMPORTANT NOTES FOR NEW DEVELOPERS**

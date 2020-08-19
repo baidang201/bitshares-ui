@@ -1,9 +1,9 @@
 {
-    "name": "BitShares2-light",
+    "name": "DNA2-light",
     "version": "3.3.191120-rc1",
-    "description": "Reference UI to showcase all features of the BitShares blockchain.",
+    "description": "Reference UI to showcase all features of the DNA blockchain.",
     "homepage": "https://github.com/bitshares/bitshares-ui",
-    "author": "BitShares UI Worker <ui-dev@bitshares.org>",
+    "author": "DNA UI Worker <ui-dev@mvsdnadev.com>",
     "contributors": [
         "Sigve Kvalsvik <kvalsvik.crypto@gmail.com>",
         "James Calfee",
@@ -90,7 +90,7 @@
     },
     "browsersList": "electron 1.7",
     "build": {
-        "productName": "BitShares",
+        "productName": "DNA",
         "appId": "org.bitshares.graphene",
         "files": [
             "build/electron",
@@ -131,7 +131,7 @@
                 "AppImage",
                 "snap"
             ],
-            "synopsis": "BitShares: Cryptocurrency and Decentralized Exchange"
+            "synopsis": "DNA: Cryptocurrency and Decentralized Exchange"
         },
         "directories": {
             "buildResources": "resources",
