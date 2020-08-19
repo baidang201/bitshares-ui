@@ -5,6 +5,11 @@ import {ChainConfig} from "bitsharesjs-ws";
 import Immutable from "immutable";
 import BaseStore from "stores/BaseStore";
 
+ChainConfig.setChainId(
+    "8dff0ec2ef11269647d0a30e6bd0b91ea9cca4f2a303c15e4b84c73d964ed34e"
+);
+ChainConfig.setPrefix("DNA");
+
 let AddressIndexWorker;
 if (__ELECTRON__) {
     AddressIndexWorker = require("worker-loader?inline!workers/AddressIndexWorker");

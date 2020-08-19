@@ -30,7 +30,7 @@ import ScanOrEnterText from "./ScanOrEnterText";
 //{
 //    "to" : "merchant_account_name",
 //    "to_label" : "Merchant Name",
-//    "currency": "TEST",
+//    "currency": "DNA",
 //    "memo" : "Invoice #1234",
 //    "line_items" : [
 //        { "label" : "Something to Buy", "quantity": 1, "price" : "1000.00" },
@@ -39,7 +39,7 @@ import ScanOrEnterText from "./ScanOrEnterText";
 //    "note" : "Something the merchant wants to say to the user",
 //    "callback" : "https://merchant.org/complete"
 //}
-// http://localhost:8080/#/invoice/8Cv8ZjMa8XCazX37XgNhj4jNc4Z5WgZFM5jueMEs2eEvL3pEmELjAVCWZEJhj9tEG5RuinPCjY1Fi34ozb8Cg3H5YBemy9JoTRt89X1QaE76xnxWPZzLcUjvUd4QZPjCyqZNxvrpCN2mm1xVRY8FNSVsoxsrZwREMyygahYz8S23ErWPRVsfZXTwJNCCbqjWDTReL5yytTKzxyKhg4YrnntYG3jdyrBimDGBRLU7yRS9pQQLcAH4T7j8LXkTocS7w1Zj4amckBmpg5EJCMATTRhtH8RSycfiXWZConzqqzxitWCxZK846YHNh
+// http://localhost:8888/#/invoice/8Cv8ZjMa8XCazX37XgNhj4jNc4Z5WgZFM5jueMEs2eEvL3pEmELjAVCWZEJhj9tEG5RuinPCjY1Fi34ozb8Cg3H5YBemy9JoTRt89X1QaE76xnxWPZzLcUjvUd4QZPjCyqZNxvrpCN2mm1xVRY8FNSVsoxsrZwREMyygahYz8S23ErWPRVsfZXTwJNCCbqjWDTReL5yytTKzxyKhg4YrnntYG3jdyrBimDGBRLU7yRS9pQQLcAH4T7j8LXkTocS7w1Zj4amckBmpg5EJCMATTRhtH8RSycfiXWZConzqqzxitWCxZK846YHNh
 
 class InvoicePay extends React.Component {
     constructor(props) {
@@ -64,7 +64,7 @@ class InvoicePay extends React.Component {
         let invoice = {
             to: "sschiessl",
             to_label: "Stefan S.",
-            currency: "BTS",
+            currency: "DNA",
             memo: "Invoice #1234",
             line_items: [
                 {label: "Something to Buy", quantity: 1, price: "0.1"},

@@ -51,7 +51,7 @@ class DepositWithdrawAssetSelector extends React.Component {
                     return item;
                 })
                 .filter(item => {
-                    if (item.id == "BTS") {
+                    if (item.id == "DNA") {
                         return true;
                     }
                     if (include) {
@@ -62,7 +62,7 @@ class DepositWithdrawAssetSelector extends React.Component {
         });
 
         if (!(includeBTS === false)) {
-            assets.push({id: "BTS", label: "BTS", gateway: ""});
+            assets.push({id: "DNA", label: "DNA", gateway: ""});
         }
 
         this.setState({

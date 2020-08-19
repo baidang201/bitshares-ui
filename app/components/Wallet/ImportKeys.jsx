@@ -24,6 +24,10 @@ import GenesisFilter from "chain/GenesisFilter";
 import {Button, Input} from "bitshares-ui-style-guide";
 
 require("./ImportKeys.scss");
+ChainConfig.setChainId(
+    "8dff0ec2ef11269647d0a30e6bd0b91ea9cca4f2a303c15e4b84c73d964ed34e"
+);
+ChainConfig.setPrefix("DNA");
 
 let import_keys_assert_checking = false;
 
@@ -151,7 +155,7 @@ class ImportKeys extends Component {
         reader.readAsText(file);
     }
 
-    /** BTS 1.0 client wallet_export_keys format. */
+    /** DNA 1.0 client wallet_export_keys format. */
     _parseImportKeyUpload(json_contents, file_name, update_state) {
         let password_checksum, unfiltered_account_keys;
         try {
@@ -167,7 +171,7 @@ class ImportKeys extends Component {
             throw e.message || e;
         }
 
-        // BTS 1.0 wallets may have a lot of generated but unused keys or spent TITAN addresses making
+        // DNA 1.0 wallets may have a lot of generated but unused keys or spent TITAN addresses making
         // wallets so large it is was not possible to use the JavaScript wallets with them.
 
         let genesis_filter = new GenesisFilter();
@@ -259,9 +263,9 @@ class ImportKeys extends Component {
     }
 
     /**
-    BTS 1.0 hosted wallet backup (wallet.bitshares.org) is supported.
+    DNA 1.0 hosted wallet backup (wallet.mvsdnadev.com) is supported.
 
-    BTS 1.0 native wallets should use wallet_export_keys instead of a wallet backup.
+    DNA 1.0 native wallets should use wallet_export_keys instead of a wallet backup.
 
     Note,  Native wallet backups will be rejected.  The logic below does not
     capture assigned account names (for unregisted accounts) and does not capture
@@ -276,13 +280,13 @@ class ImportKeys extends Component {
         let account_addresses = {};
 
         let savePubkeyAccount = function(pubkey, account_name) {
-            //replace BTS with GPH
+            //replace DNA with GPH
             pubkey = ChainConfig.address_prefix + pubkey.substring(3);
             let address = PublicKey.fromPublicKeyString(
                 pubkey
             ).toAddressString();
             let addresses = account_addresses[account_name] || [];
-            address = "BTS" + address.substring(3);
+            address = "DNA" + address.substring(3);
             //DEBUG console.log("... address",address,account_name)
             addresses.push(address);
             account_addresses[account_name] = addresses;
@@ -336,7 +340,7 @@ class ImportKeys extends Component {
                 }
             }
             if (!encrypted_brainkey)
-                throw "Please use a BTS 1.0 wallet_export_keys file instead";
+                throw "Please use a DNA 1.0 wallet_export_keys file instead";
 
             if (!password_checksum)
                 throw file.name + " is missing password_checksum";

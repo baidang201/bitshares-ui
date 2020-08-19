@@ -24,7 +24,7 @@ function _isTestnet() {
  * @returns {string}
  */
 export function getWalletName() {
-    return "BitShares";
+    return "DNA";
 }
 
 /**
@@ -32,7 +32,7 @@ export function getWalletName() {
  * @returns {string}
  */
 export function getWalletURL() {
-    return "https://wallet.bitshares.org";
+    return "https://wallet.mvsdnadev.com";
 }
 
 /**
@@ -52,7 +52,7 @@ export function getFaucet() {
 export function getTestFaucet() {
     // fixme should be solved by introducing _isTestnet into getFaucet and fixing the mess in the Settings when fetching faucet address
     return {
-        url: "https://faucet.testnet.bitshares.eu", // operated as a contribution by BitShares EU
+        url: "https://faucet.testnet.bitshares.eu", // operated as a contribution by DNA EU
         show: true,
         editable: false
     };
@@ -91,9 +91,9 @@ export function getDefaultLogin() {
  */
 export function getUnits() {
     if (_isTestnet()) {
-        return ["TEST"];
+        return ["DNA"];
     }
-    return ["BTS", "USD", "CNY", "BTC", "EUR", "GBP"];
+    return ["DNA", "USD", "CNY", "BTC", "EUR", "GBP"];
 }
 
 export function getDefaultMarket() {
@@ -110,9 +110,9 @@ export function getDefaultMarket() {
  */
 export function getMyMarketsBases() {
     if (_isTestnet()) {
-        return ["TEST"];
+        return ["DNA"];
     }
-    return ["BTS", "BTC", "ETH", "USD", "CNY"];
+    return ["DNA", "BTC", "ETH", "USD", "CNY"];
 }
 
 /**
@@ -122,12 +122,12 @@ export function getMyMarketsBases() {
  */
 export function getMyMarketsQuotes() {
     if (_isTestnet()) {
-        return ["TEST"];
+        return ["DNA"];
     }
     let tokens = {
         nativeTokens: [
             "BTC",
-            "BTS",
+            "DNA",
             "CNY",
             "EUR",
             "GOLD",
@@ -205,10 +205,10 @@ export function getMyMarketsQuotes() {
  */
 export function getFeaturedMarkets(quotes = []) {
     if (_isTestnet()) {
-        return [["USD", "TEST"]];
+        return [["USD", "DNA"]];
     }
     return [
-        ["USD", "BTS"],
+        ["USD", "DNA"],
         ["USD", "GOLD"],
         ["USD", "HERO"],
         ["USD", "GDEX.BTC"],
@@ -223,7 +223,7 @@ export function getFeaturedMarkets(quotes = []) {
         ["USD", "RUDEX.USDT"],
         ["USD", "RUDEX.WLS"],
         ["USD", "RUDEX.SMOKE"],
-        ["CNY", "BTS"],
+        ["CNY", "DNA"],
         ["CNY", "USD"],
         ["CNY", "YOYOW"],
         ["CNY", "OCT"],
@@ -243,17 +243,17 @@ export function getFeaturedMarkets(quotes = []) {
         ["CNY", "RUDEX.USDT"],
         ["CNY", "RUDEX.WLS"],
         ["CNY", "RUDEX.SMOKE"],
-        ["BTS", "PPY"],
-        ["BTS", "RUBLE"],
-        ["BTS", "HERO"],
-        ["BTS", "OCT"],
-        ["BTS", "SILVER"],
-        ["BTS", "GOLD"],
-        ["BTS", "GDEX.BTC"],
-        ["BTS", "GDEX.ETH"],
-        ["BTS", "GDEX.EOS"],
-        ["BTS", "GDEX.BTO"],
-        ["BTS", "GDEX.USDT"],
+        ["DNA", "PPY"],
+        ["DNA", "RUBLE"],
+        ["DNA", "HERO"],
+        ["DNA", "OCT"],
+        ["DNA", "SILVER"],
+        ["DNA", "GOLD"],
+        ["DNA", "GDEX.BTC"],
+        ["DNA", "GDEX.ETH"],
+        ["DNA", "GDEX.EOS"],
+        ["DNA", "GDEX.BTO"],
+        ["DNA", "GDEX.USDT"],
         ["RUDEX.USDT", "RUDEX.BTC"],
         ["RUDEX.USDT", "RUDEX.ETH"],
         ["RUDEX.USDT", "RUDEX.EOS"],
@@ -272,18 +272,18 @@ export function getFeaturedMarkets(quotes = []) {
         ["RUBLE", "RUDEX.GOLOS"],
         ["RUDEX.BTC", "RUDEX.PZM"],
         ["RUB", "RUDEX.GOLOS"],
-        ["BTS", "RUDEX.GOLOS"],
-        ["BTS", "RUDEX.STEEM"],
-        ["BTS", "RUDEX.EOS"],
-        ["BTS", "RUDEX.BTC"],
-        ["BTS", "RUDEX.ETH"],
-        ["BTS", "RUDEX.USDT"],
-        ["BTS", "RUDEX.WLS"],
-        ["BTS", "RUDEX.SMOKE"],
-        ["BTS", "RUDEX.PZM"],
-        ["BTS", "XBTSX.STH"],
-        ["BTS", "XBTSX.WAVES"],
-        ["BTS", "HERTZ"]
+        ["DNA", "RUDEX.GOLOS"],
+        ["DNA", "RUDEX.STEEM"],
+        ["DNA", "RUDEX.EOS"],
+        ["DNA", "RUDEX.BTC"],
+        ["DNA", "RUDEX.ETH"],
+        ["DNA", "RUDEX.USDT"],
+        ["DNA", "RUDEX.WLS"],
+        ["DNA", "RUDEX.SMOKE"],
+        ["DNA", "RUDEX.PZM"],
+        ["DNA", "XBTSX.STH"],
+        ["DNA", "XBTSX.WAVES"],
+        ["DNA", "HERTZ"]
     ].filter(a => {
         if (!quotes.length) return true;
         return quotes.indexOf(a[0]) !== -1;
@@ -347,13 +347,13 @@ export function getConfigurationAsset() {
     if (_isTestnet()) {
         assetSymbol = "NOTIFICATIONS";
     } else {
-        assetSymbol = "TEST";
+        assetSymbol = "DNA";
     }
     // explanation will be parsed out of the asset description (via split)
     return {
         symbol: assetSymbol,
         explanation:
-            "This asset is used for decentralized configuration of the BitShares UI placed under bitshares.org."
+            "This asset is used for decentralized configuration of the DNA UI placed under mvsdnadev.com."
     };
 }
 

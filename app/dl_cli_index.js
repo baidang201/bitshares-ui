@@ -11,6 +11,11 @@ import WalletActions from "actions/WalletActions";
 import alt from "alt-instance";
 import iDB from "idb-instance";
 
+ChainConfig.setChainId(
+    "8dff0ec2ef11269647d0a30e6bd0b91ea9cca4f2a303c15e4b84c73d964ed34e"
+);
+ChainConfig.setPrefix("DNA");
+
 const utils = {
     PrivateKey,
     PublicKey,
@@ -23,7 +28,6 @@ const utils = {
     BackupActions,
     WalletActions,
     ChainStore,
-    ChainConfig,
 
     alt,
     iDB,

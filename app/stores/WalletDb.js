@@ -18,6 +18,10 @@ import AddressIndex from "stores/AddressIndex";
 import SettingsActions from "actions/SettingsActions";
 import {Notification} from "bitshares-ui-style-guide";
 import counterpart from "counterpart";
+ChainConfig.setChainId(
+    "8dff0ec2ef11269647d0a30e6bd0b91ea9cca4f2a303c15e4b84c73d964ed34e"
+);
+ChainConfig.setPrefix("DNA");
 
 let aes_private = null;
 let _passwordKey = null;
