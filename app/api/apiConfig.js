@@ -113,14 +113,14 @@ export const nodeRegions = [
 export const settingsAPIs = {
     // If you want a location to be translated, add the translation to settings in locale-xx.js
     // and use an object {translate: key} in WS_NODE_LIST
-    DEFAULT_WS_NODE: "wss://mvsdna.info/ws",
+    DEFAULT_WS_NODE: "ws://52.192.195.187:8090",
     WS_NODE_LIST: [
         {
-            url: "wss://mvsdna.info/ws",
+            url: "ws://52.192.195.187:8090",
             location: {translate: "settings.api_closest"}
         },
         {
-            url: "wss://mvsdna.info/ws",
+            url: "ws://52.192.195.187:8090",
             location: "MainNet"
         }
     ],
